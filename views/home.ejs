@@ -1,0 +1,24 @@
+<%- include('partials/header') -%>
+
+    <h1>
+        <%= title %>
+    </h1>
+
+    <p>
+        <%= content %>
+    </p>
+
+    <% for(let i of postArr){%>
+
+        <h2>
+            <%= i.title %>
+        </h2>
+        <p>
+            <%= i.content.substring(0, 100) +" ..."%><a href="/posts/<%=  i.title %>">Read More</a>
+        </p>
+
+
+        <% } %>
+
+
+            <%- include('partials/footer') -%>
